@@ -1,3 +1,5 @@
+import os
+
 print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -19,7 +21,8 @@ opcao_escolhida = int(input('Escolha uma opção: '))
 
 def finalizar_app():
     #input('Deseja finalizar o app? (s/n): ')
-    print('Finalizando o app...')
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print('Finalizando o app...\n')
 
 if opcao_escolhida == 1:
     print('Cadastrar restaurante:')
